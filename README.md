@@ -4,4 +4,6 @@ The site gives the user the option of a password between 8 and 128 characters an
 
 here is the active link: https://alecschro13.github.io/randompassword-generator/
 
-here is the repository for github:
+here is the repository for github: https://github.com/AlecSchro13/randompassword-generator
+
+
