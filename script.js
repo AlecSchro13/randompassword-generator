@@ -10,10 +10,11 @@ var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 function generatePassword() {
   var passLength = parseInt(prompt("How many characters would you like your password to be?"));
   if (!passLength) {
-    alert("must enter a number between 8 and 32");
-//created alert prompt to pick a password length between 8 and 32 characters. 
-  } else if (passLength < 8 || passLength > 32) {
-    alert("you must enter a number between 8 and 32");
+    alert("must enter a number between 8 and 128");
+//created alert prompt to pick a password length between 8 and 128 characters. 
+  } else if (passLength < 8 || passLength > 128) {
+  //made password length 
+    alert("you must enter a number between 8 and 128");
     return null;
   } else {
     var confirmUp = confirm("Would you like to include uppercase letters?");
@@ -52,9 +53,11 @@ if (confirmUp===false && confirmLower===false && confirmNumbers===false && confi
   choices = upperCase.concat(numbers, specialCase);
 //realized you couldn't make one with all the other cases except lower case so this is to let that scenario happen
 } else if (confirmNumbers) {
-
+  choices = numbers;
+} else if (confirmSpecial) {
+  choices = (specialCase);
 }
-
+//made sure all choices can be the only option picked. 
 var password = [];
 for (var i = 0; i < passLength; i ++) {
   var pickChoices = choices[Math.floor(Math.random() * choices.length)];
