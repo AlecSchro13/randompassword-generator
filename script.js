@@ -13,7 +13,7 @@ function generatePassword() {
     alert("must enter a number between 8 and 128");
 //created alert prompt to pick a password length between 8 and 128 characters. 
   } else if (passLength < 8 || passLength > 128) {
-  //made password length 
+  //made password length to 128
     alert("you must enter a number between 8 and 128");
     return null;
   } else {
