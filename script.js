@@ -21,6 +21,7 @@ function generatePassword() {
     var confirmNumbers = confirm("Would you like to include numbers?");
     var confirmSpecial = confirm("Would you like to include special characters?");
   };
+//created var for alert and parameters of the password.
 if (confirmUp===false && confirmLower===false && confirmNumbers===false && confirmSpecial===false) {
   choices = alert("You enter at least one character type.");
   return null;
