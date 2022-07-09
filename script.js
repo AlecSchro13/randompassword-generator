@@ -32,10 +32,27 @@ if (confirmUp===false && confirmLower===false && confirmNumbers===false && confi
   choices = upperCase.concat(lowerCase, numbers);
 } else if (confirmUp && confirmLower) {
   choices = upperCase.concat(lowerCase);
+} else if (confirmUp && confirmNumbers) {
+  choices = upperCase.concat(numbers);
+} else if (confirmUp && confirmSpecial) {
+  choices = upperCase.concat(specialCase);
+} else if (confirmUp) {
+  choices = upperCase;
 } else if (confirmLower && confirmNumbers && confirmSpecial) {
   choices = lowerCase.concat(specialCase, numbers);
 } else if (confirmLower && confirmNumbers) {
   choices = lowerCase.concat(numbers);
+} else if (confirmLower && confirmSpecial) {
+  choices = lowerCase.concat(specialCase);
+} else if (confirmLower) {
+  choices = lowerCase;
+} else if (confirmNumbers && confirmSpecial) {
+  choices = numbers.concat(specialCase);
+} else if (confirmUp && confirmNumbers && confirmSpecial) {
+  choices = upperCase.concat(numbers, specialCase);
+//realized you couldn't make one with all the other cases except lower case so this is to let that scenario happen
+} else if (confirmNumbers) {
+
 }
 
 var password = [];
