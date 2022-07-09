@@ -25,6 +25,7 @@ function generatePassword() {
 if (confirmUp===false && confirmLower===false && confirmNumbers===false && confirmSpecial===false) {
   choices = alert("You enter at least one character type.");
   return null;
+//created alert to let user know they must select at least one parameter.
 } else if (confirmUp && confirmLower && confirmNumbers && confirmSpecial) {
   choices = upperCase.concat(lowerCase, specialCase, numbers);
 } else if (confirmUp && confirmLower && confirmNumbers) {
